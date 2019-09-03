@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="spring-cloud" />
         <module name="springcloud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka-client" target="1.7" />
       <module name="eureka-server" target="1.7" />
+      <module name="spring-cloud" target="1.7" />
       <module name="springcloud" target="1.7" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="spring-cloud" options="-parameters" />
       <module name="springcloud" options="-parameters" />
     </option>
   </component>
