@@ -1,3 +1,6 @@
+server:
+  port: 8761
+
 eureka:
   instance:
     hostname: localhost
@@ -6,7 +9,7 @@ eureka:
   client:
     service-url:
       #注册中心
-      defaultZone: http://${eureka.instance.hostname}:8673/eureka/,http://${eureka.instance.hostname}:8671/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     register-with-eureka: false   #使用将注册中心注册成服务
     fetch-registry: false
 
