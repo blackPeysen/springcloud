@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-common" />
+        <module name="eureka-config" />
         <module name="eureka-goods" />
         <module name="eureka-order" />
         <module name="eureka-server" />
-        <module name="server-common" />
         <module name="springcloud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eureka-common" target="1.7" />
+      <module name="eureka-config" target="1.7" />
       <module name="eureka-goods" target="1.7" />
       <module name="eureka-order" target="1.7" />
       <module name="eureka-server" target="1.7" />
@@ -24,6 +27,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-common" options="-parameters" />
+      <module name="eureka-config" options="-parameters" />
       <module name="eureka-goods" options="-parameters" />
       <module name="eureka-order" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
