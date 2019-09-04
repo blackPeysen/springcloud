@@ -1,5 +1,9 @@
 server:
   port: 8762
+#jasypt加密的密匙
+jasypt:
+  encryptor:
+    password: peysen
 
 spring:
   application:
@@ -11,7 +15,8 @@ spring:
           uri: https://github.com/blackPeysen/eureka-config.git
           search-paths: springcloud
           username: blackPeysen
-          password: Pmm1363039590!
+          # 对密码进行加密
+          password: ENC(+kcdiAwGoB/Bc3PsfeCmP6CQFDlOR38X)
           basedir: E:\workSpace\springcloud\eureka-config\config\
   rabbitmq:
     host: 127.0.0.1

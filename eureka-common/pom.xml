@@ -17,43 +17,55 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <cloud.version>2.1.2.RELEASE</cloud.version>
     </properties>
 
     <dependencies>
-
-        <!-- 引入加密 依赖 -->
+        <!-- 引入web 依赖 -->
         <dependency>
-            <groupId>com.github.ulisesbocchio</groupId>
-            <artifactId>jasypt-spring-boot-starter</artifactId>
-            <version>2.1.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- 引入eureka 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>2.1.2.RELEASE</version>
-        </dependency>
-
-        <!-- 引入feign 依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.1.1.RELEASE</version>
+            <version>${cloud.version}</version>
         </dependency>
 
         <!-- 引入Config 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
-            <version>2.1.1.RELEASE</version>
+            <version>${cloud.version}</version>
+        </dependency>
+
+        <!-- 引入Feign 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${cloud.version}</version>
         </dependency>
 
         <!-- 引入bus-amqp 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-            <version>2.1.2.RELEASE</version>
+            <version>${cloud.version}</version>
+        </dependency>
+
+
+        <!-- 引入JPA 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- 引入Mysql 依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <!-- 引入fastjson 依赖 -->
@@ -63,9 +75,17 @@
             <version>1.2.44</version>
         </dependency>
 
+        <!-- 引入lombok 依赖 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- 引入jasypt 依赖 -->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>2.1.0</version>
         </dependency>
 
         <dependency>

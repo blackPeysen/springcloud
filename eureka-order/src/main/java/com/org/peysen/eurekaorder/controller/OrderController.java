@@ -22,6 +22,12 @@ import javax.validation.Valid;
 @Slf4j
 public class OrderController {
 
+
+    @PostMapping("/feignTest")
+    public String feignTest(){
+        return "feignTest" + System.currentTimeMillis();
+    }
+
     @PostMapping("/create")
     public void create(@Valid OrderDTO orderDTO, BindingResult bindingResult){
         if (bindingResult.hasErrors()){

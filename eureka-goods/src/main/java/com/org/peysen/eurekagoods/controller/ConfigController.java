@@ -1,6 +1,7 @@
 package com.org.peysen.eurekagoods.controller;
 
 import com.netflix.discovery.converters.Auto;
+import com.org.peysen.eurekacommon.feignClient.FeignOrderClient;
 import com.org.peysen.eurekagoods.config.DataSourceProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,12 +18,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigController {
 
     @Autowired
+    private FeignOrderClient feignOrderClient;
+
+    @Autowired
     private DataSourceProperties dataSourceProperties;
 
-    @PostMapping("/dataSouce")
+    @PostMapping("/dataSource")
     public String dataSource(){
         System.out.println("ConfigController-->dataSource");
         return  dataSourceProperties.toString();
+    }
+
+    @PostMapping("/feignTest")
+    public String feignTest(){
+        System.out.println("ConfigController-->feignTest");
+        return  feignOrderClient.feignTest();
     }
 
 }

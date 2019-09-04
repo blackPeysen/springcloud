@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.org.peysen.eurekaorder.feignService","com.org.peysen.eurekacommon.feignService"})
+@EnableFeignClients(basePackages = "com.org.peysen.eurekacommon.feignClient")
 @SpringBootApplication
 public class EurekaOrderApplication {
 
