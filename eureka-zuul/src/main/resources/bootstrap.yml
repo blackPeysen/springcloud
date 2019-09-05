@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-zuul
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: EUREKA-CONFIG
+      profile: dev
+      name: eureka-zuul   #这里选择配置中心中包含的配置文件
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/

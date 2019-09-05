@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name="eureka-goods")
 public interface FeignGoodsClient {
 
-    @RequestMapping(method = RequestMethod.POST,value = "/config/dataSource")
+    @RequestMapping(method = RequestMethod.POST,value = "/goods/config/dataSource")
     String getDataSource();
 
 }

@@ -11,6 +11,7 @@
         <module name="eureka-goods" />
         <module name="eureka-order" />
         <module name="eureka-server" />
+        <module name="eureka-zuul" />
         <module name="springcloud" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="eureka-goods" target="1.7" />
       <module name="eureka-order" target="1.7" />
       <module name="eureka-server" target="1.7" />
+      <module name="eureka-zuul" target="1.7" />
       <module name="server-common" target="1.7" />
       <module name="spring-cloud" target="1.7" />
       <module name="springcloud" target="1.7" />
@@ -32,6 +34,7 @@
       <module name="eureka-goods" options="-parameters" />
       <module name="eureka-order" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="eureka-zuul" options="-parameters" />
       <module name="server-common" options="-parameters" />
       <module name="spring-cloud" options="-parameters" />
       <module name="springcloud" options="-parameters" />
