@@ -6,38 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-common" />
+        <module name="zipkin-server" />
+        <module name="cloud-register" />
         <module name="eureka-config" />
-        <module name="eureka-goods" />
-        <module name="eureka-order" />
-        <module name="eureka-server" />
         <module name="eureka-zuul" />
-        <module name="springcloud" />
+        <module name="cloud-zipkin-server" />
+        <module name="eureka-common" />
+        <module name="eureka-order" />
+        <module name="eureka-goods" />
+        <module name="cloud-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="eureka-common" target="1.7" />
-      <module name="eureka-config" target="1.7" />
-      <module name="eureka-goods" target="1.7" />
-      <module name="eureka-order" target="1.7" />
-      <module name="eureka-server" target="1.7" />
-      <module name="eureka-zuul" target="1.7" />
-      <module name="server-common" target="1.7" />
-      <module name="spring-cloud" target="1.7" />
-      <module name="springcloud" target="1.7" />
+      <module name="cloud-zipkin-server" target="1.7" />
+      <module name="cloudzipkinserver" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-config" options="-parameters" />
+      <module name="cloud-register" options="-parameters" />
+      <module name="cloud-zipkin-server" options="-parameters" />
+      <module name="cloudzipkinserver" options="" />
       <module name="eureka-common" options="-parameters" />
       <module name="eureka-config" options="-parameters" />
       <module name="eureka-goods" options="-parameters" />
       <module name="eureka-order" options="-parameters" />
-      <module name="eureka-server" options="-parameters" />
       <module name="eureka-zuul" options="-parameters" />
-      <module name="server-common" options="-parameters" />
-      <module name="spring-cloud" options="-parameters" />
-      <module name="springcloud" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
 </project>

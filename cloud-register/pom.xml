@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <groupId>com.org.peysen</groupId>
+        <artifactId>springcloud</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath/>
     </parent>
+
     <groupId>com.org.peysen</groupId>
-    <artifactId>eureka-goods</artifactId>
+    <artifactId>cloud-register</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-goods</name>
+    <name>cloud-register</name>
+    <modelVersion>4.0.0</modelVersion>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -20,13 +22,16 @@
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>com.org.peysen</groupId>
-            <artifactId>eureka-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
