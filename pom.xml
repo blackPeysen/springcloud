@@ -1,32 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <!--<modules>-->
-        <!--<module>eureka-common</module>-->
-    <!--</modules>-->
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.3.12.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.org.peysen</groupId>
     <artifactId>springcloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud</name>
-    <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-    <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>eureka-common</module>
+        <module>eureka-order</module>
+        <module>eureka-goods</module>
+        <module>eureka-config</module>
+        <module>eureka-server</module>
+        <module>eureka-zuul</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
+        <mysql.version>8.0.17</mysql.version>
+        <jasypt.version>2.1.0</jasypt.version>
+        <lombok.version>1.18.20</lombok.version>
+        <fastjson.version>1.2.44</fastjson.version>
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <spring.cloud.version>2.1.2.RELEASE</spring.cloud.version>
+        <alibaba.cloud.version>2.2.7.RELEASE</alibaba.cloud.version>
     </properties>
 
-    <dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 引入web 依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
 
-    </dependencies>
+            <!-- 引入JPA 依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- 引入eureka 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <!-- 引入Config 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <!-- 引入Feign 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <!-- 引入Seate分布式事务 依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+                <version>${alibaba.cloud.version}</version>
+            </dependency>
+
+            <!-- 引入bus-amqp 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <!-- 引入Mysql 依赖 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- 引入fastjson 依赖 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- 引入lombok 依赖 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- 引入jasypt 依赖 -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.1.2.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
