@@ -22,7 +22,6 @@ import javax.validation.Valid;
 @Slf4j
 public class OrderController {
 
-
     @PostMapping("/feignTest")
     public String feignTest(){
         return "feignTest" + System.currentTimeMillis();
@@ -33,6 +32,12 @@ public class OrderController {
         if (bindingResult.hasErrors()){
            throw new OrderRunException(ResultEnum.PARAM_ERROR.getCode(),bindingResult.getFieldError().getDefaultMessage());
         }
+    }
+
+
+    @PostMapping("/createOrder")
+    public void createOrder(){
+
     }
 
 }

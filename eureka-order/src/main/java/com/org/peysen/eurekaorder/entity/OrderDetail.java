@@ -12,23 +12,14 @@ import java.math.BigDecimal;
  * 2019/9/3 14:26
  */
 @Data
-@Entity
+@Entity(name = "order_info")
 public class OrderDetail {
-
     @Id
-    private String detailId;
-
-    private String orderId;
+    private Integer orderId;
 
     private String productId;
 
-    private String productName;
-
-    private BigDecimal productPrice;
-
     private Integer productNum;
-
-    private String productIcon;
 
 }
 

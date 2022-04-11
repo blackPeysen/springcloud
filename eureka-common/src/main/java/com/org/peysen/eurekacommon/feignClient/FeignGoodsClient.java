@@ -19,4 +19,8 @@ public interface FeignGoodsClient {
     @RequestMapping(method = RequestMethod.POST,value = "/config/dataSource")
     String getDataSource();
 
+
+    @RequestMapping(method = RequestMethod.POST,value = "/goods/updateStock")
+    String updateStock();
+
 }

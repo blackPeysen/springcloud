@@ -1,6 +1,5 @@
 package com.org.peysen.eurekagoods.controller;
 
-import com.netflix.discovery.converters.Auto;
 import com.org.peysen.eurekacommon.feignClient.FeignOrderClient;
 import com.org.peysen.eurekagoods.config.DataSourceProperties;
 import lombok.extern.slf4j.Slf4j;

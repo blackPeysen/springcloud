@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Created by mengmeng.Pei
  * 2019/9/3 14:44
  */
-public interface OrderDetailRepository extends JpaRepository<OrderDetail,String> {
+public interface OrderDetailRepository extends JpaRepository<OrderDetail, Integer> {
 }
