@@ -31,7 +31,7 @@
         <jasypt.version>2.1.0</jasypt.version>
         <lombok.version>1.18.20</lombok.version>
         <fastjson.version>1.2.44</fastjson.version>
-        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <spring.boot.version>2.5.12</spring.boot.version>
         <spring.cloud.version>2.1.2.RELEASE</spring.cloud.version>
         <alibaba.cloud.version>2.2.7.RELEASE</alibaba.cloud.version>
     </properties>
