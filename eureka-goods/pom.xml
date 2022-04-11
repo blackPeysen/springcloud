@@ -13,11 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-goods</name>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.org.peysen</groupId>
